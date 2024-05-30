@@ -16,6 +16,52 @@
 	<link rel="stylesheet" href="vendor/owl-carousel/owl.carousel.min.css">
 	<link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+	<style>
+		/* Container for the floating icons */
+		.floating-icons {
+			position: fixed;
+			bottom: 20px;
+			right: 20px;
+			z-index: 1000;
+		}
+
+		/* Style for the individual icon containers */
+		.floating-icons a {
+			display: block;
+			margin-bottom: 10px;
+			width: 50px;
+			height: 50px;
+			background-color: #25d366;
+			/* WhatsApp green */
+			color: white;
+			border-radius: 50%;
+			text-align: center;
+			line-height: 50px;
+			font-size: 24px;
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+			transition: background-color 0.3s;
+		}
+
+		/* Change background color on hover */
+		.floating-icons a:hover {
+			background-color: #128C7E;
+			/* Darker WhatsApp green */
+		}
+
+		/* Style for the call icon */
+		.floating-icons .call-icon {
+			background-color: rgb(218, 182, 38);
+			/* Light blue for call */
+		}
+
+		.floating-icons .call-icon:hover {
+			background-color: rgb(218, 182, 38);
+			/* Darker blue for call */
+		}
+	</style>
 </head>
 
 <body>
@@ -24,9 +70,6 @@
 		<ul class="list menu_right">
 			<li>
 				<a href="index.html">Home</a>
-			</li>
-			<li>
-				<a href="about.html">About</a>
 			</li>
 			<li>
 				<a href="projects.html">Projects</a>
@@ -79,7 +122,7 @@
 		<div class="container">
 			<h2 class="section-intro__subtitle">Our Services</h2>
 			<div class="btn-group breadcrumb">
-				<a href="#/" class="btn">Home</a>
+				<a href="/sample 2/nvm_and_tfg/index.html" class="btn">Home</a>
 				<span class="btn btn--rightBorder">Services</span>
 			</div>
 		</div>
@@ -174,6 +217,15 @@
 		</div>
 	</section>
 
+	<div class="floating-icons">
+		<a href="https://wa.me/1234567890" target="_blank" title="Chat on WhatsApp">
+			<i class="fab fa-whatsapp"></i>
+		</a>
+		<a href="tel:+1234567890" class="call-icon" title="Call us">
+			<i class="fas fa-phone-alt"></i>
+		</a>
+	</div>
+
 	<footer class="footer footer-bg">
 		<div class="container">
 			<div class="row">
@@ -208,10 +260,10 @@
 				<div class="col-sm-4 col-lg-2 mb-4 mb-lg-0 text-center text-sm-left">
 					<h3 class="footer__title">Quick Links</h3>
 					<ul class="footer__link">
-						<li><a href="#/">About Us</a></li>
-						<li><a href="#/">Contact Us</a></li>
-						<li><a href="#/">Our Services</a></li>
-						<li><a href="#/">Projects</a></li>
+						<li><a href="/sample 2/nvm_and_tfg/index.html">Home</a></li>
+						<li><a href="/sample 2/nvm_and_tfg/contact.html">Contact Us</a></li>
+						<li><a href="/sample 2/nvm_and_tfg/service.html">Our Services</a></li>
+						<li><a href="/sample 2/nvm_and_tfg/projects.html">Projects</a></li>
 					</ul>
 				</div>
 				<div class="col-sm-4 col-lg-2 mb-4 mb-lg-0 text-center text-sm-left">
