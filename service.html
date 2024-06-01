@@ -20,6 +20,56 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 	<style>
+		/* Popup container - can be anything you want */
+		.popup {
+			display: none;
+			/* Hidden by default */
+			position: fixed;
+			/* Stay in place */
+			z-index: 1;
+			/* Sit on top */
+			left: 0;
+			top: 0;
+			width: 100%;
+			/* Full width */
+			height: 100%;
+			/* Full height */
+			overflow: auto;
+			/* Enable scroll if needed */
+			background-color: rgb(0, 0, 0);
+			/* Fallback color */
+			background-color: rgba(0, 0, 0, 0.4);
+			/* Black w/ opacity */
+		}
+
+		/* Popup content */
+		.popup-content {
+			background-color: #fefefe;
+			margin: 15% auto;
+			/* 15% from the top and centered */
+			padding: 20px;
+			border: 1px solid #888;
+			width: 50%;
+			/* Could be more or less, depending on screen size */
+			text-align: center;
+			color: black;
+		}
+
+		/* Close button */
+		.close {
+			color: #aaa;
+			float: right;
+			font-size: 35px;
+			font-weight: bold;
+		}
+
+		.close:hover,
+		.close:focus {
+			color: black;
+			text-decoration: none;
+			cursor: pointer;
+		}
+
 		/* Container for the floating icons */
 		.floating-icons {
 			position: fixed;
@@ -211,7 +261,8 @@
 						it a hotel, or a school, or even a personal studio. So what are you thrilled about ?</p>
 				</div>
 				<div class="col-lg-5 text-center text-lg-right">
-					<a class="btn btn-dark btn--leftBorder btn--rightBorder" href="#/">Get Estimate</a>
+					<!-- <a class="btn btn-dark btn--leftBorder btn--rightBorder" href="#/">Get Estimate</a> -->
+					<button id="getEstimate" class="btn btn--rightBorder btn--leftBorder">Get Estimate</button>
 				</div>
 			</div>
 		</div>
@@ -312,6 +363,34 @@
 		$(".toggle_icon").on('click', function () {
 			$('body').toggleClass("open");
 		});
+	</script>
+
+	<script>
+		// Get the popup
+		var popup = document.getElementById("myPopup");
+
+		// Get the button that opens the popup
+		var btn = document.getElementById("getEstimate");
+
+		// Get the <span> element that closes the popup
+		var span = document.getElementsByClassName("close")[0];
+
+		// When the user clicks the button, open the popup 
+		btn.onclick = function () {
+			popup.style.display = "block";
+		}
+
+		// When the user clicks on <span> (x), close the popup
+		span.onclick = function () {
+			popup.style.display = "none";
+		}
+
+		// When the user clicks anywhere outside of the popup, close it
+		window.onclick = function (event) {
+			if (event.target == popup) {
+				popup.style.display = "none";
+			}
+		}
 	</script>
 </body>
 
